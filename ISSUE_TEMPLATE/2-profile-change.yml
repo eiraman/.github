@@ -1,0 +1,61 @@
+# Draft.
+name: Role Profile change
+description: Correct, update or extend an existing Role Profile, family file, template or the gate checklist.
+title: "[Profile change] <family>/<profile-id>: <summary>"
+labels: ["type:profile-change", "state:triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If the current guidance is **unsafe** when followed by an agent, do not use this form: report it privately (SECURITY.md §3).
+  - type: input
+    id: artifact
+    attributes:
+      label: Artifact and version
+      description: Path and release tag or commit.
+      placeholder: role-profiles/azure/azure-architect @ v0.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of change
+      options:
+        - Outdated or wrong source citation
+        - Rule or competence update
+        - Qualification suite case added or corrected
+        - Task catalogue or Digital Seniority level
+        - Engines, Mode and Role, Unit Cost
+        - Metadata (reviewer, domain, dates)
+        - Editorial
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current text
+      description: Quote the section that should change.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed change and source
+      description: The new rule with its precise source reference. Mark uncalibrated thresholds "to be calibrated" and unknowns "unknown, evidence needed".
+    validations:
+      required: true
+  - type: dropdown
+    id: requalification
+    attributes:
+      label: Does the change affect behaviour?
+      description: A behaviour change needs the suite rerun and a new domain review before the profile is qualified again.
+      options: ["Yes, requalification needed", "No, editorial only", "Not sure"]
+    validations:
+      required: true
+  - type: textarea
+    id: coi
+    attributes:
+      label: Conflict of interest
+      description: Write "none" if none (GOVERNANCE §8).
+    validations:
+      required: true

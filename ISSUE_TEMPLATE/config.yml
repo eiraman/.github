@@ -1,0 +1,9 @@
+# Draft. Placeholders in <...> are filled at repository creation.
+blank_issues_enabled: false
+contact_links:
+  - name: Report a vulnerability or unsafe guidance privately
+    url: <link PLACEHOLDER to private vulnerability reporting>
+    about: Exploitable weaknesses in tools and unsafe guidance in Role Profiles, templates or the gate checklist are reported privately (SECURITY.md). Do not open a public issue.
+  - name: Questions and discussion
+    url: <link PLACEHOLDER to discussions>
+    about: Ask questions before opening an issue.

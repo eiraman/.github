@@ -1,0 +1,58 @@
+# Draft.
+name: Security finding in guidance (non-sensitive)
+description: Weakness or gap in security, privacy or compliance guidance that is safe to discuss in public.
+title: "[Security guidance] <artifact>: <summary>"
+labels: ["type:security-guidance", "wg:security", "state:triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Stop if the finding is exploitable or could cause harm when followed by an agent or adopter.** Use private reporting instead (SECURITY.md). A domain reviewer can suspend the affected version as a pre-authorised containment action.
+
+        Use this public form for gaps and improvements: a missing requirement, an outdated reference, a weak test case, or a level requirement that needs strengthening.
+  - type: checkboxes
+    id: public-ok
+    attributes:
+      label: Public disclosure check
+      options:
+        - label: This finding gives no attacker an advantage and does not describe unsafe guidance that adopters may be following now.
+          required: true
+  - type: input
+    id: artifact
+    attributes:
+      label: Affected artifact and version
+      placeholder: role-profiles/sviluppo/shell-iac-developer @ v0.1.0, or framework/levels (level 1)
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Role Profile rule
+        - Qualification suite (missing negative or hostile case)
+        - Applicability level requirement (0, 1 or 2)
+        - Gate checklist or out-of-scope list
+        - Agent threat model (Security Risk Posture, Agents section)
+        - Mapping to an external framework (SSDF, AI RMF, ISO/IEC 42001, AI Act)
+    validations:
+      required: true
+  - type: textarea
+    id: finding
+    attributes:
+      label: Finding
+      description: What is missing or weak, and what could go wrong.
+    validations:
+      required: true
+  - type: textarea
+    id: reference
+    attributes:
+      label: Reference
+      description: Standard, clause and version that supports the finding.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed correction and evidence that would prove it
+      description: A requirement must be testable. Relaxing a level requirement needs an RFC.

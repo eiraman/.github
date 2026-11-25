@@ -1,0 +1,61 @@
+# Draft.
+name: Adopter case
+description: Declare adoption, submit a case study or contribute anonymised evidence.
+title: "[Adopter] <anonymised project label>: <level>"
+labels: ["type:adopter-case", "wg:adoption-evidence", "state:triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use CASE-STUDY-TEMPLATE.md for the full case. **Anonymise first:** no client names, no personal data, no secrets, no internal paths or URLs. A Privacy reviewer checks every submission derived from a real project.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of submission
+      options:
+        - Declaration of adoption
+        - Case study
+        - Escalation sample (under- and over-escalation)
+        - Return-to-method proposal
+        - Manager test user report
+    validations:
+      required: true
+  - type: dropdown
+    id: level
+    attributes:
+      label: Qualified level of the adoption
+      options: ["0 · personal use", "1 · internal team", "2 · external users", "Not yet assessed"]
+    validations:
+      required: true
+  - type: dropdown
+    id: class
+    attributes:
+      label: Project class
+      options: ["0", "1", "2", "Out of scope (stopped at the gate)", "Not yet assessed"]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Eiraman version used
+      placeholder: Guide v1.0, Role Profiles release v0.2.0
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Or attach the completed case study template.
+    validations:
+      required: true
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: Confirmations
+      options:
+        - label: I have the right to share this evidence under the rules of my organisation.
+          required: true
+        - label: The submission contains no client names, personal data or secrets.
+          required: true
+        - label: I agree that the anonymised evidence may be used to calibrate level thresholds and stage thresholds.
+          required: true

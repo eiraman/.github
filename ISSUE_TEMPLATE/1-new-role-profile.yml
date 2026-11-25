@@ -1,0 +1,82 @@
+# Draft.
+name: New Role Profile
+description: Propose a new Role Profile in an existing family. A new family needs an RFC first.
+title: "[Profile] <family>/<profile-id>: <role name>"
+labels: ["type:role-profile", "state:triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read CONTRIBUTING §4 and the registry generation rules before starting. A new **family** is a one-way door: use the *RFC proposal* form instead (GOVERNANCE §6.2).
+  - type: dropdown
+    id: family
+    attributes:
+      label: Family
+      options: [Azure, AWS, Databricks, FinOps, Functional Analysis, Web Design, Development]
+    validations:
+      required: true
+  - type: input
+    id: profile-id
+    attributes:
+      label: Profile id
+      description: Unique in the whole registry; equal to the folder name. Lowercase, hyphens.
+      placeholder: aws-data-engineer
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose and responsibilities
+      description: What the role does, and what it must not do (for example, an architect does not modify code).
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Normative sources
+      description: Standards, vendor documentation and reference architectures, each with a precise reference (clause, section, page). Rules without a source will be marked "profile convention".
+    validations:
+      required: true
+  - type: textarea
+    id: tools
+    attributes:
+      label: Mandatory deterministic tools
+      description: Tools the role must run, and how their results are read.
+  - type: textarea
+    id: limits
+    attributes:
+      label: Declared limits
+      description: Work that falls outside the profile. A package in these limits takes the project out of scope.
+    validations:
+      required: true
+  - type: textarea
+    id: suite
+    attributes:
+      label: Qualification suite outline
+      description: At least 5 known-answer cases, including one hostile instruction that must produce a recorded Deny.
+    validations:
+      required: true
+  - type: input
+    id: domain
+    attributes:
+      label: Publishing domain
+      description: Domain group that reviews and publishes (WORKING-GROUPS §3).
+      placeholder: Cloud Architecture
+    validations:
+      required: true
+  - type: textarea
+    id: coi
+    attributes:
+      label: Conflict of interest
+      description: Employer, vendor relationships, consulting or training interests related to this profile (GOVERNANCE §8). Write "none" if none.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmations
+      options:
+        - label: The profile will contain no client names, credentials, local paths or personal data.
+          required: true
+        - label: I will run the validator before asking for review, and I will not review my own profile.
+          required: true

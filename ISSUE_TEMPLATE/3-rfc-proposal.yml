@@ -1,0 +1,63 @@
+# Draft.
+name: RFC proposal
+description: Propose a one-way door, such as a Guide change, a level or class change, a new family or working group, a breaking format change, or a governance change.
+title: "[RFC] <short title>"
+labels: ["type:rfc", "state:triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue announces an RFC. The RFC itself is a pull request that copies `rfcs/0000-template.md` (rfcs/README.md). In doubt about reversibility, it is a one-way door.
+  - type: dropdown
+    id: subject
+    attributes:
+      label: Subject
+      description: Determines who decides (GOVERNANCE §6.3).
+      options:
+        - Guide text (Author decides)
+        - Applicability levels, project classes or out-of-scope list (SC decides)
+        - New Role Profile family
+        - New working group or domain
+        - Breaking change to profile format or validator rules
+        - Governance, licences or trademark
+        - Other one-way door
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and evidence
+      description: What does not work today, with evidence (case studies, adopter data, issues).
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal in short
+    validations:
+      required: true
+  - type: textarea
+    id: irreversibility
+    attributes:
+      label: Why this is a one-way door
+      description: What would be hard or costly to reverse, and for whom (adopters, profiles, tools).
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: true
+  - type: textarea
+    id: family
+    attributes:
+      label: For a new family only
+      description: Scope, first three profiles planned, lead and deputy (handles), publishing domain (WORKING-GROUPS §3).
+  - type: textarea
+    id: coi
+    attributes:
+      label: AI-Use, Assisted-by and conflict of interest
+      description: "AI-Use: none | review | partial | substantial; one Assisted-by: line per tool (CONTRIBUTING §3); any conflict of interest. Write none if none."
+    validations:
+      required: true

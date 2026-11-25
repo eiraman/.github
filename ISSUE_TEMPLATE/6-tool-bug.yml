@@ -1,0 +1,50 @@
+# Draft.
+name: Bug in tools
+description: Defect in the validator, activation tool, Manager View, CI, release manifests or site generator.
+title: "[Bug] <tool>: <summary>"
+labels: ["type:bug", "wg:devsecops-tooling", "state:triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Security vulnerabilities go to private reporting (SECURITY.md §2), not here.
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Tool
+      options:
+        - Profile validator
+        - Activation tool (catalogue and activation files)
+        - Manager View
+        - CI workflow
+        - Release signing or manifest
+        - Site generator
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Command, input (anonymised) and environment (OS, Python version).
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual result
+      description: Paste the output. A false Deny and a missing Deny are both bugs; say which.
+    validations:
+      required: true
+  - type: dropdown
+    id: user
+    attributes:
+      label: Reporter
+      description: Reports from non-technical managers are welcome; we will help reproduce.
+      options: ["Developer", "Non-technical manager", "Other"]
