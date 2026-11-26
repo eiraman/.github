@@ -31,6 +31,8 @@ A contribution has three separate states, shown as labels on the pull request:
 
 If a required review or check is not available, the pull request stays open with the reason recorded. It is never merged "pending review".
 
+Releases follow the checklist in [community/RELEASING.md](https://github.com/eiraman/community/blob/main/RELEASING.md), and versions the rules in [community/VERSIONING.md](https://github.com/eiraman/community/blob/main/VERSIONING.md). The `changelog` CI check expects each pull request to change the repository's `CHANGELOG.md`, normally under `[Unreleased]`; a maintainer may add the label `no-changelog` instead.
+
 ## 2. Developer Certificate of Origin (DCO)
 <!-- The DCO text in section 2.1 is (C) The Linux Foundation and its contributors and is reproduced verbatim. -->
 
