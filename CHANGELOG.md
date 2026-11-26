@@ -11,6 +11,18 @@ follow [community/VERSIONING.md](https://github.com/eiraman/community/blob/main/
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-11-26
+
+Scope: Change Requests CR-005 and CR-006 of the method project. Version bump: PATCH, workflow only;
+no organisation default changes.
+
+### Fixed
+
+- CI, `compliance.yml`: the local-path check removes http(s) URLs from the matched lines and matches
+  again, so a path segment inside a URL (such as `/home/` in an official ISO URL) is no longer flagged.
+  The block is the one of `role-profiles` v0.4.1 (the whole workflow file is now identical to that one). Change Requests CR-005 and CR-006 of the
+  method project.
+
 ## [0.2.0] - 2026-11-26
 
 ### Added
@@ -36,6 +48,7 @@ All files are drafts, not yet in force.
 - `profile/README.md`, the organisation landing page.
 - CI: compliance checks (DCO and AI declaration, REUSE, secrets and deny-list) and the Markdown link check.
 
-[Unreleased]: https://github.com/eiraman/.github/compare/v0.2.0...main
+[Unreleased]: https://github.com/eiraman/.github/compare/v0.2.1...main
+[0.2.1]: https://github.com/eiraman/.github/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/eiraman/.github/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/eiraman/.github/releases/tag/v0.1.0
