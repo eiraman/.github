@@ -11,6 +11,8 @@ follow [community/VERSIONING.md](https://github.com/eiraman/community/blob/main/
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-11-26
+
 ### Added
 
 - `CONTRIBUTING.md` §1 links the release checklist and the versioning rules in `community`, and describes
@@ -20,8 +22,8 @@ follow [community/VERSIONING.md](https://github.com/eiraman/community/blob/main/
 ## [0.1.0] - 2026-11-25
 
 First public release, published as commit `0d4ea5f` of `github.com/eiraman/.github` during the restricted
-launch of 25 November 2026. It was not tagged; the version number was assigned afterwards. All files are
-drafts, not yet in force.
+launch of 25 November 2026. It was not tagged; the version number was assigned afterwards. The tag `v0.1.0` will be applied retroactively to that commit.
+All files are drafts, not yet in force.
 
 ### Added
 
@@ -35,4 +37,5 @@ drafts, not yet in force.
 - CI: compliance checks (DCO and AI declaration, REUSE, secrets and deny-list) and the Markdown link check.
 
 [Unreleased]: https://github.com/eiraman/.github/compare/0d4ea5fdcce66205e15e9dc132cc3689f1f60052...main
+[0.1.1]: https://github.com/eiraman/.github/compare/0d4ea5fdcce66205e15e9dc132cc3689f1f60052...main
 [0.1.0]: https://github.com/eiraman/.github/tree/0d4ea5fdcce66205e15e9dc132cc3689f1f60052
