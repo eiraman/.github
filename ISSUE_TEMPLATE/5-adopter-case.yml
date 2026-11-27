@@ -38,7 +38,7 @@ body:
     id: version
     attributes:
       label: Eiraman version used
-      placeholder: Guide 1.0.0-rc.5, Role Profiles release v0.11.0
+      placeholder: Guide 1.0.0-rc.6, Role Profiles release v0.11.0
     validations:
       required: true
   - type: textarea

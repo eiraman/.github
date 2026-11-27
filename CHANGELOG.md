@@ -28,7 +28,9 @@ other languages is unchanged.
 - `PULL_REQUEST_TEMPLATE.md`: the two native speakers are required for translations into languages other
   than Italian; for the Italian translation of the Guide the reviewer is the Author.
 - `ISSUE_TEMPLATE/5-adopter-case.yml`: the placeholder of the field "Eiraman version used" reads "Guide
-  1.0.0-rc.5, Role Profiles release v0.11.0". Placeholder text only; the field is unchanged.
+  1.0.0-rc.6, Role Profiles release v0.11.0". Placeholder text only; the field is unchanged. The release is
+  aligned to the Guide 1.0.0-rc.6 (decision D-031 of the Human Manager), not rc.5; the version of this release does
+  not change, because it is still an unreleased candidate.
 
 ## [0.2.1] - 2026-11-26
 
