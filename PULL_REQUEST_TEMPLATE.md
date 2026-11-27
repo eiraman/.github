@@ -59,7 +59,7 @@ Accountable-Human: <name> <email>
 
 - Requested reviewer (not the author): @<handle>
 - For Role Profiles, templates or the gate checklist, publishing domain reviewer (WORKING-GROUPS §3): @<handle>
-- Additional reviewers required by the area (Security for signing, secrets or CI permissions; Privacy for project classes or personal data; two native speakers for translations): @<handle>
+- Additional reviewers required by the area (Security for signing, secrets or CI permissions; Privacy for project classes or personal data; two native speakers for translations into languages other than Italian; the Author for the Italian translation of the Guide): @<handle>
 
 If a required reviewer or check is unavailable, this pull request stays open and the reason is recorded here:
 

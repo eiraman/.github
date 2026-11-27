@@ -11,6 +11,25 @@ follow [community/VERSIONING.md](https://github.com/eiraman/community/blob/main/
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-11-27
+
+Scope: Change Request CR-030 of the method project, work package WP-30D (organisation defaults), after
+decision D-IT-1 of the Human Manager (CR-029). **Breaking:** a rule of `CONTRIBUTING.md` changes and an
+obligation is removed (VERSIONING §2.1): the Italian translation of the Guide is curated and approved by the
+Author and no longer needs two native-speaker reviewers. While the artifact is at `0.y.z`, a change that would
+be MAJOR bumps MINOR (VERSIONING §2.6), hence the version bump: MINOR. The reviewer rule for translations into
+other languages is unchanged.
+
+### Changed
+
+- `CONTRIBUTING.md` §5, "Translations and training": English is canonical and prevails; the Italian
+  translation of the Guide is curated and approved by the Author (D-IT-1); translations into other
+  languages need two native-speaker reviewers and are informative until the Author approves them as faithful.
+- `PULL_REQUEST_TEMPLATE.md`: the two native speakers are required for translations into languages other
+  than Italian; for the Italian translation of the Guide the reviewer is the Author.
+- `ISSUE_TEMPLATE/5-adopter-case.yml`: the placeholder of the field "Eiraman version used" reads "Guide
+  1.0.0-rc.5, Role Profiles release v0.11.0". Placeholder text only; the field is unchanged.
+
 ## [0.2.1] - 2026-11-26
 
 Scope: Change Requests CR-005 and CR-006 of the method project. Version bump: PATCH, workflow only;
@@ -48,7 +67,8 @@ All files are drafts, not yet in force.
 - `profile/README.md`, the organisation landing page.
 - CI: compliance checks (DCO and AI declaration, REUSE, secrets and deny-list) and the Markdown link check.
 
-[Unreleased]: https://github.com/eiraman/.github/compare/v0.2.1...main
+[Unreleased]: https://github.com/eiraman/.github/compare/v0.3.0...main
+[0.3.0]: https://github.com/eiraman/.github/compare/v0.2.1...v0.3.0
 [0.2.1]: https://github.com/eiraman/.github/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/eiraman/.github/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/eiraman/.github/releases/tag/v0.1.0

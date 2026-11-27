@@ -199,7 +199,7 @@ The same path and states apply to document templates and to the gate checklist.
 - **Applicability levels.** By RFC, owned by Security with Privacy and Legal & Compliance.
 - **Tools.** Pull request to DevSecOps & Tooling, with tests. Security issues go to [SECURITY.md](SECURITY.md), not to public issues.
 - **Adoption evidence and case studies.** Adoption & Evidence, using the case study template. Remove personal data before submitting.
-- **Translations and training.** Translation & Education. English is canonical; translations are informative.
+- **Translations and training.** Translation & Education. English is canonical and prevails. The Italian translation of the Guide is curated and approved by the Author (decision D-IT-1); fixes to it go through Translation & Education and the Author. Translations into other languages need two native-speaker reviewers, one not the translator, and are informative until the Author approves them as faithful.
 
 ## 6. Recognition
 
